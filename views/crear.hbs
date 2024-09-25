@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head }}
+
+<body>
+    {{> navbar }}
+    <header class="container mt-3">
+        <h1>Crear</h1>
+    </header>
+    <section class="container mt-3">
+        <div>
+            <form action="/archivos/crear" method="get">
+                <div class="mb-3">
+                    <label for="txtNombreArchivo" class="form-label">Nombre Archivo</label>
+                    <input type="text" class="form-control" id="txtNombreArchivo" name="txtNombreArchivo">
+                </div>
+                <div class="mb-3">
+                    <label for="txtContenido" class="form-label">Contenido</label>
+                    <textarea class="form-control" id="txtContenido" name="txtContenido"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Archivo</button>
+            </form>
+        </div>
+    </section>
+
+    {{> scripts }}
+</body>
+
+</html>

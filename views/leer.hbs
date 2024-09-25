@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head }}
+
+<body>
+    {{> navbar }}
+    <header class="container mt-3">
+        <h1>Leer</h1>
+    </header>
+    <section class="container mt-3">
+        <div>
+            <form action="/archivos/leer" method="get">
+                <div class="mb-3">
+                    <label for="txtNombreArchivo" class="form-label">Nombre Archivo</label>
+                    <input type="text" class="form-control" id="txtNombreArchivo" name="txtNombreArchivo">
+                </div>
+                <button type="submit" class="btn btn-primary">Leer Archivo</button>
+            </form>
+        </div>
+    </section>
+    {{#if datos}}
+    <div class="container mt-3">
+        <p class="display-3">{{datos}}</p>
+    </div>
+    {{/if}}
+    {{> scripts }}
+</body>
+
+</html>
